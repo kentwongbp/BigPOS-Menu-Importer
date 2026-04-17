@@ -39,7 +39,7 @@ if uploaded_file is not None:
         with st.spinner("AI is analyzing the menu (usually takes 10-20 seconds)..."):
             try:
                 # Use Gemini 1.5 Flash (Fast, free, great at vision)
-                model = genai.GenerativeModel('gemini-1.5-flash-latest')
+                model = genai.GenerativeModel('gemini-1.5-pro-latest')
                 response = model.generate_content([prompt, image])
                 
                 csv_data = response.text.strip()
